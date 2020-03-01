@@ -21,9 +21,6 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo $GITHUB_CONTEXT
 
-      - name: "Dump OS $ENV"
-        run: echo $ENV
-
       - name: "Dump Context: env"
         env:
           ENV_CONTEXT: ${{ toJson(env) }}
@@ -43,11 +40,6 @@ jobs:
         env:
           RUNNER_CONTEXT: ${{ toJson(runner) }}
         run: echo $RUNNER_CONTEXT
-
-      - name: "Dump Context: secrets"
-        env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
-        run: echo $SECRETS_CONTEXT
 
       - name: "Dump Context: strategy"
         env:
