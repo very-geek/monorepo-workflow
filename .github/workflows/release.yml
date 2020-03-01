@@ -1,0 +1,43 @@
+name: 根据变更集（changesets）发布包
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+        node:
+          - 10
+          - 12
+
+    steps:
+      - name: 检出分支
+        uses: actions/checkout@v2
+        with:
+          ref: release
+          # fetch all history so changesets can generate full changelogs
+          fetch-depth: 0
+
+      - name: 搭建环境
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 安装依赖
+        run: yarn --frozen-lockfile
+
+      - name: 执行发布
+        uses: changesets/action@master
+        with:
+          publish: yarn release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
