@@ -7,16 +7,17 @@ on:
 
 jobs:
   release:
-    runs-on: ${{ matrix.os }}
+    # runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-          - windows-latest
-        node:
-          - 10
-          - 12
+    # strategy:
+    #   matrix:
+    #     os:
+    #       - ubuntu-latest
+    #       - windows-latest
+    #     node:
+    #       - 10
+    #       - 12
 
     steps:
       - name: 检出分支
@@ -29,7 +30,8 @@ jobs:
       - name: 搭建环境
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 12.x
+          # node-version: ${{ matrix.node }}
 
       - name: 安装依赖
         run: yarn --frozen-lockfile
