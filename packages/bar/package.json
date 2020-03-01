@@ -1,6 +1,6 @@
 {
   "name": "@very-geek/bar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Dummy package for testing purpose only.",
   "main": "index.js",
   "repository": "https://github.com/very-geek/monorepo-workflow.git",
@@ -10,6 +10,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@very-geek/foo": "0.2.0"
+    "@very-geek/foo": "1.0.0"
   }
 }
