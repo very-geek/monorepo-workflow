@@ -2,9 +2,7 @@ name: Find Involved Package(s)
 
 on:
   pull_request:
-    branches: [master]
-  push:
-    branches: [packages/*]
+    branches: [release, "!renovate/*"]
 
 jobs:
   inspect:
