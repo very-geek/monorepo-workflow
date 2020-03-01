@@ -1,3 +1,5 @@
+import foo from '@very-geek/foo';
+
 module.exports = function bar() {
-  return "@very-geek/bar@2";
+  return `${foo()} with @very-geek/bar@2`;
 };
