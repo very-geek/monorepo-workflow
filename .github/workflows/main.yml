@@ -1,0 +1,56 @@
+name: Find Involved Package(s)
+
+on: [push, pull_request]
+    
+jobs:
+  inspect:
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node: [10, 12]
+
+    steps:
+      - name: "Dump Context: github"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo $GITHUB_CONTEXT
+
+      - name: "Dump OS $ENV"
+        run: echo $ENV
+
+      - name: "Dump Context: env"
+        env:
+          ENV_CONTEXT: ${{ toJson(env) }}
+        run: echo $ENV_CONTEXT 
+
+      - name: "Dump Context: job"
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo $JOB_CONTEXT
+
+      - name: "Dump Context: steps"
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo $STEPS_CONTEXT
+
+      - name: "Dump Context: runner"
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: echo $RUNNER_CONTEXT
+
+      - name: "Dump Context: secrets"
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+        run: echo $SECRETS_CONTEXT
+
+      - name: "Dump Context: strategy"
+        env:
+          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+        run: echo $STRATEGY_CONTEXT
+
+      - name: "Dump Context: matrix"
+        env:
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
+        run: echo $MATRIX_CONTEXT
