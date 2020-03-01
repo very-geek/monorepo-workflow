@@ -1,13 +1,14 @@
-name: 发布变更
+name: 提交变更
 
 on:
   push:
-    branches:
+    branches-ignore:
       - master
+      - renovate/*
 
 jobs:
-  release:
-    name: Release
+  feature:
+    name: Feature
     runs-on: ubuntu-latest
 
     # runs-on: ${{ matrix.os }}
@@ -37,10 +38,7 @@ jobs:
       - name: 安装依赖
         run: yarn --frozen-lockfile
 
-      - name: 执行发布
+      - name: 变更 PR
         uses: changesets/action@master
-        with:
-          publish: yarn release
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

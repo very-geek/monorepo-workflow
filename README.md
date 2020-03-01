@@ -2,4 +2,4 @@
 
 ## Workflow Status:
 
-![Find Involved Package(s)](<https://github.com/very-geek/monorepo-workflow/workflows/Find%20Involved%20Package(s)/badge.svg>)
+![Release](https://github.com/very-geek/monorepo-workflow/workflows/release/badge.svg)

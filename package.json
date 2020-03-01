@@ -7,6 +7,6 @@
     "@changesets/cli": "^2.5.2"
   },
   "scripts": {
-    "release": "changeset publish"
+    "release": "changeset publish && git push --follow-tags"
   }
 }
