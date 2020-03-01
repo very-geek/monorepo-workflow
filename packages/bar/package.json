@@ -8,5 +8,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@very-geek/foo": "file:../foo"
   }
 }
