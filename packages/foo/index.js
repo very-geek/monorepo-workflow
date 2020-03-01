@@ -1,3 +1,3 @@
 module.exports = function foo() {
-  return '@very-geek/foo@2';
+  return '@very-geek/foo@1.x';
 };
