@@ -1,0 +1,12 @@
+{
+  "name": "@very-geek/foo",
+  "version": "0.1.0",
+  "description": "Dummy package for test purpose only.",
+  "main": "index.js",
+  "repository": "https://github.com/very-geek/monorepo-workflow.git",
+  "author": "nightire <nightire@very-geek.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
