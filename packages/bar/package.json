@@ -10,6 +10,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@very-geek/foo": "1.0.0"
+    "@very-geek/foo": "file:../foo"
   }
 }
