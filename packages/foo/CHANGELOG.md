@@ -1,5 +1,12 @@
 # @very-geek/foo
 
+## 1.0.1
+
+### Patch Changes
+
+- 5d13e5d: add more comments
+- d6ff0ec: add some useful comments
+
 ## 1.0.0
 
 ### Major Changes
