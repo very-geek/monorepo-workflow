@@ -1,5 +1,13 @@
 # @very-geek/foo
 
+## 1.1.0
+
+### Minor Changes
+
+- [`b07770e`](https://github.com/very-geek/monorepo-workflow/commit/b07770e0f1c177d3681be82d2bb5933b739e9d0f) Thanks [@nightire](https://github.com/nightire)! - This is a manually commited update descriptions...
+
+  :tada: Awesome release!
+
 ## 1.0.1
 
 ### Patch Changes
